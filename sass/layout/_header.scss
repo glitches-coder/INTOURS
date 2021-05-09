@@ -1,0 +1,55 @@
+
+
+
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to right bottom
+    , #3fc1c19c, #00b2caa6) , url(../images/hero-5.png);
+    background-size: cover;
+    background-position: top;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path:polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    position: relative;
+
+    @include respond(phone) {
+        background-image: linear-gradient(to right bottom
+        , #3fc1c19c, #00b2caa6) , url(../images/hero5-s.jpg);
+        background-size: cover;
+        background-position: top;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
+
+    @include respond(tab-port) {
+        background-image: linear-gradient(to right bottom
+        , #3fc1c19c, #00b2caa6) , url(../images/hero5-s.jpg);
+        background-size: cover;
+        background-position: top;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
+
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+    &__logo {
+        height: 10rem;
+    }
+    
+    &__logo:hover{
+        animation: MoveInUp 2s ease-out;
+    
+    }
+    
+    &__text-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -65%);
+        text-align: center;
+        
+    }
+
+}
